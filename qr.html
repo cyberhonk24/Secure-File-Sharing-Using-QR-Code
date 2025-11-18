@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>QR</title>
+</head>
+<body>
+  <h2>File Uploaded Successfully!</h2>
+  <p><a href="{{ download_url }}">Download Link</a></p>
+  <p>Scan this QR code to download from another device:</p>
+
+  <!-- Use the base64 string directly; no filter -->
+  <img src="data:image/png;base64,{{ qr_image }}" alt="QR Code" />
+
+  <p>Filename: {{ filename }}</p>
+</body>
+</html>
